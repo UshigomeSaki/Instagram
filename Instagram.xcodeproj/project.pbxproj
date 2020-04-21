@@ -23,6 +23,10 @@
 		FF9A0A42244EA00000CF3308 /* MyPageMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9A0A40244EA00000CF3308 /* MyPageMainView.xib */; };
 		FF9A0A45244EA3C300CF3308 /* TopMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A0A43244EA3C300CF3308 /* TopMainTableViewCell.swift */; };
 		FF9A0A46244EA3C300CF3308 /* TopMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9A0A44244EA3C300CF3308 /* TopMainTableViewCell.xib */; };
+		FF9A0A49244EB17D00CF3308 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A0A47244EB17D00CF3308 /* NextViewController.swift */; };
+		FF9A0A4A244EB17D00CF3308 /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9A0A48244EB17D00CF3308 /* NextViewController.xib */; };
+		FF9A0A4D244EB19C00CF3308 /* NextMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A0A4B244EB19C00CF3308 /* NextMainView.swift */; };
+		FF9A0A4E244EB19C00CF3308 /* NextMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9A0A4C244EB19C00CF3308 /* NextMainView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		FF9A0A40244EA00000CF3308 /* MyPageMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageMainView.xib; sourceTree = "<group>"; };
 		FF9A0A43244EA3C300CF3308 /* TopMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMainTableViewCell.swift; sourceTree = "<group>"; };
 		FF9A0A44244EA3C300CF3308 /* TopMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopMainTableViewCell.xib; sourceTree = "<group>"; };
+		FF9A0A47244EB17D00CF3308 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		FF9A0A48244EB17D00CF3308 /* NextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextViewController.xib; sourceTree = "<group>"; };
+		FF9A0A4B244EB19C00CF3308 /* NextMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMainView.swift; sourceTree = "<group>"; };
+		FF9A0A4C244EB19C00CF3308 /* NextMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextMainView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,10 @@
 				FF9A0A40244EA00000CF3308 /* MyPageMainView.xib */,
 				FF9A0A43244EA3C300CF3308 /* TopMainTableViewCell.swift */,
 				FF9A0A44244EA3C300CF3308 /* TopMainTableViewCell.xib */,
+				FF9A0A47244EB17D00CF3308 /* NextViewController.swift */,
+				FF9A0A48244EB17D00CF3308 /* NextViewController.xib */,
+				FF9A0A4B244EB19C00CF3308 /* NextMainView.swift */,
+				FF9A0A4C244EB19C00CF3308 /* NextMainView.xib */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -184,7 +196,9 @@
 				FF9A0A29244E99E000CF3308 /* Assets.xcassets in Resources */,
 				FF9A0A46244EA3C300CF3308 /* TopMainTableViewCell.xib in Resources */,
 				FF9A0A42244EA00000CF3308 /* MyPageMainView.xib in Resources */,
+				FF9A0A4A244EB17D00CF3308 /* NextViewController.xib in Resources */,
 				FF9A0A27244E99DE00CF3308 /* Main.storyboard in Resources */,
+				FF9A0A4E244EB19C00CF3308 /* NextMainView.xib in Resources */,
 				FF9A0A3E244E9FDC00CF3308 /* MyPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,8 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF9A0A45244EA3C300CF3308 /* TopMainTableViewCell.swift in Sources */,
+				FF9A0A49244EB17D00CF3308 /* NextViewController.swift in Sources */,
 				FF9A0A41244EA00000CF3308 /* MyPageMainView.swift in Sources */,
 				FF9A0A3D244E9FDC00CF3308 /* MyPageViewController.swift in Sources */,
+				FF9A0A4D244EB19C00CF3308 /* NextMainView.swift in Sources */,
 				FF9A0A35244E9ED100CF3308 /* TopViewController.swift in Sources */,
 				FF9A0A20244E99DE00CF3308 /* AppDelegate.swift in Sources */,
 				FF9A0A22244E99DE00CF3308 /* SceneDelegate.swift in Sources */,
