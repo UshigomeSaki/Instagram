@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPageMainView" customModule="Instagram" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="0V9-n6-91k" id="Ww7-XI-PaU"/>
+                <outlet property="roundView" destination="eOI-co-pW6" id="gGi-U3-jjs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkv-0E-acs">
+                    <rect key="frame" x="105" y="89" width="90.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パンケーキが好きです" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-3D-KdF">
+                    <rect key="frame" x="20" y="142" width="173.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V9-n6-91k">
+                    <rect key="frame" x="10" y="172.5" width="394" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="プロフィール編集">
+                        <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-co-pW6">
+                    <rect key="frame" x="20" y="64" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="eOI-co-pW6" secondAttribute="height" multiplier="1:1" id="SiQ-NR-iQE"/>
+                        <constraint firstAttribute="height" constant="70" id="fM0-5f-WZL"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Kkv-0E-acs" firstAttribute="leading" secondItem="eOI-co-pW6" secondAttribute="trailing" constant="15" id="2wK-oT-Z41"/>
+                <constraint firstItem="eOI-co-pW6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="I64-91-bHv"/>
+                <constraint firstItem="0V9-n6-91k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="IIf-nK-ehe"/>
+                <constraint firstItem="0V9-n6-91k" firstAttribute="top" secondItem="ezB-3D-KdF" secondAttribute="bottom" constant="10" id="Pq5-0m-Jxi"/>
+                <constraint firstItem="eOI-co-pW6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="T9P-7K-1eg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0V9-n6-91k" secondAttribute="trailing" constant="10" id="TYH-x8-f9j"/>
+                <constraint firstItem="ezB-3D-KdF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Tgx-A1-CJ3"/>
+                <constraint firstItem="ezB-3D-KdF" firstAttribute="top" secondItem="eOI-co-pW6" secondAttribute="bottom" constant="8" symbolic="YES" id="uJf-wu-JKA"/>
+                <constraint firstItem="Kkv-0E-acs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="weL-kY-ybf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon" width="2048" height="2048"/>
+    </resources>
+</document>

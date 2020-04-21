@@ -16,7 +16,7 @@ extension TopMainTableViewCellDelegate {
 // MARK: - Property
 class TopMainTableViewCell: BaseTableViewCell {
     weak var delegate: TopMainTableViewCellDelegate? = nil
-    @IBOutlet weak var roundView: UIView!
+    @IBOutlet weak var roundView: UIImageView!
 }
 // MARK: - Life cycle
 extension TopMainTableViewCell {

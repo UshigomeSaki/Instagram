@@ -10,7 +10,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TopViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="Esq-jU-469"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="Esq-jU-469"/>
                     <navigationItem key="navigationItem" id="GGN-FC-tSz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -21,7 +21,7 @@
         <scene sceneID="eyt-3W-ymY">
             <objects>
                 <viewController id="p3L-Uw-zel" customClass="MyPageViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MyPage" id="qkO-kA-DGn"/>
+                    <tabBarItem key="tabBarItem" title="MyPage" image="person.circle" catalog="system" selectedImage="person.circle" id="qkO-kA-DGn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlD-3W-JzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,8 +52,10 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mc7-cm-Vla"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="znN-YG-KrX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.74048776389730597" green="0.74497202014288555" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="YOn-O5-qcH"/>
@@ -65,4 +67,8 @@
             <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
