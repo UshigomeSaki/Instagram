@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPageViewController" customModule="Instagram" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NextViewController" customModule="Instagram" customModuleProvider="target">
             <connections>
-                <outlet property="headerView" destination="E6g-Ze-rCr" id="Ome-NA-LET"/>
-                <outlet property="mainView" destination="qh3-bS-VSv" id="PPw-3e-dcf"/>
+                <outlet property="headerView" destination="HhT-PJ-W0V" id="kGw-u7-rTN"/>
+                <outlet property="mainView" destination="LZG-xg-Lhj" id="9Ii-7e-BNj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,30 +19,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6g-Ze-rCr" customClass="HeaderView" customModule="PGFramework">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhT-PJ-W0V" customClass="HeaderView" customModule="PGFramework">
                     <rect key="frame" x="0.0" y="44" width="414" height="48"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="48" id="arm-ee-zwJ"/>
+                        <constraint firstAttribute="height" constant="48" id="VB9-s3-bhK"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qh3-bS-VSv" customClass="MyPageMainView" customModule="Instagram" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZG-xg-Lhj" customClass="NextMainView" customModule="Instagram" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qh3-bS-VSv" secondAttribute="trailing" id="80o-KC-Pq4"/>
-                <constraint firstItem="E6g-Ze-rCr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JPr-Cr-Gqc"/>
-                <constraint firstItem="qh3-bS-VSv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="M2S-ih-asa"/>
-                <constraint firstItem="E6g-Ze-rCr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="M89-Ua-Yi6"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="E6g-Ze-rCr" secondAttribute="trailing" id="XS6-j7-e23"/>
-                <constraint firstItem="qh3-bS-VSv" firstAttribute="top" secondItem="E6g-Ze-rCr" secondAttribute="bottom" id="tsB-As-Leq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qh3-bS-VSv" secondAttribute="bottom" id="w8l-do-Py8"/>
+                <constraint firstItem="LZG-xg-Lhj" firstAttribute="top" secondItem="HhT-PJ-W0V" secondAttribute="bottom" id="8eU-1b-wfx"/>
+                <constraint firstItem="HhT-PJ-W0V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Mvi-Ny-3Ow"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HhT-PJ-W0V" secondAttribute="trailing" id="Pc6-Bz-28B"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LZG-xg-Lhj" secondAttribute="bottom" id="SH5-gP-iZv"/>
+                <constraint firstItem="LZG-xg-Lhj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yfz-eM-Aza"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LZG-xg-Lhj" secondAttribute="trailing" id="ZH2-yN-jiW"/>
+                <constraint firstItem="HhT-PJ-W0V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="d8k-9V-xcR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="108"/>
+            <point key="canvasLocation" x="139" y="127"/>
         </view>
     </objects>
 </document>

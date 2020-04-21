@@ -19,6 +19,7 @@ extension TopViewController {
     override func loadView() {
         super.loadView()
         setLayout()
+        setDelegate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,16 @@ extension TopViewController {
     }
 }
 // MARK: - Protocol
-extension TopViewController {
+extension TopViewController :TopMainViewDelegate{
+    func didSelectRowAt() {
+        let nextViewController = NextViewController()
+        navigationController?.pushViewController(nextViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+    
+    
+    
+    
 }
 // MARK: - method
 extension TopViewController {
@@ -36,6 +46,9 @@ extension TopViewController {
         headerView.setCenter(text: "Home", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         headerView.setRight(text: "投稿", fontSize: 18, color: #colorLiteral(red: 0.6743580091, green: 0.6239380521, blue: 0.8428714463, alpha: 1))
         headerView.setLeft(text: "")
+    }
+    func setDelegate(){
+        mainView.delegate = self
     }
 }
 

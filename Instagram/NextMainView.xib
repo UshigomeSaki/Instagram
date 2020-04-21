@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NextMainView" customModule="Instagram" customModuleProvider="target">
+            <connections>
+                <outlet property="roundView" destination="cZE-Zp-Keq" id="Wpt-Tr-iYc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZE-Zp-Keq">
+                    <rect key="frame" x="20" y="64" width="40" height="40"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Fg8-qA-br3"/>
+                        <constraint firstAttribute="width" secondItem="cZE-Zp-Keq" secondAttribute="height" multiplier="1:1" id="vhg-UZ-n9Q"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRB-0w-O80">
+                    <rect key="frame" x="80" y="74" width="81" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake" translatesAutoresizingMaskIntoConstraints="NO" id="yqa-eU-MbU">
+                    <rect key="frame" x="0.0" y="124" width="414" height="310.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="yqa-eU-MbU" secondAttribute="height" multiplier="4:3" id="JFi-c1-jyg"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="♡ □ ▷" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAN-BB-JuQ">
+                    <rect key="frame" x="20" y="454.5" width="64" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X44-CS-Hrr">
+                    <rect key="frame" x="20" y="488.5" width="374" height="81.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="C12-1D-RyP"/>
+                    </constraints>
+                    <string key="text">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="yqa-eU-MbU" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0i4-PH-0oe"/>
+                <constraint firstItem="kAN-BB-JuQ" firstAttribute="top" secondItem="yqa-eU-MbU" secondAttribute="bottom" constant="20" id="5aE-Jt-1ef"/>
+                <constraint firstItem="kRB-0w-O80" firstAttribute="leading" secondItem="cZE-Zp-Keq" secondAttribute="trailing" constant="20" id="7ix-B4-BVS"/>
+                <constraint firstItem="kAN-BB-JuQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="FIg-T3-6YE"/>
+                <constraint firstItem="yqa-eU-MbU" firstAttribute="top" secondItem="cZE-Zp-Keq" secondAttribute="bottom" constant="20" id="Geu-Tw-LAb"/>
+                <constraint firstAttribute="trailing" secondItem="X44-CS-Hrr" secondAttribute="trailing" constant="20" id="JMf-kC-VGm"/>
+                <constraint firstItem="X44-CS-Hrr" firstAttribute="top" secondItem="kAN-BB-JuQ" secondAttribute="bottom" constant="10" id="Pma-5B-DI5"/>
+                <constraint firstItem="cZE-Zp-Keq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="QYv-mH-sfD"/>
+                <constraint firstItem="kRB-0w-O80" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="aZR-dF-egF"/>
+                <constraint firstItem="yqa-eU-MbU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cCr-xC-02X"/>
+                <constraint firstItem="yqa-eU-MbU" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="sHa-OO-if5"/>
+                <constraint firstItem="X44-CS-Hrr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="v9z-EU-Usu"/>
+                <constraint firstItem="cZE-Zp-Keq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wD4-GD-N74"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pancake" width="3264" height="2448"/>
+    </resources>
+</document>
