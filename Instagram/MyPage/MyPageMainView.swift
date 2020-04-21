@@ -16,13 +16,22 @@ extension MyPageMainViewDelegate {
 // MARK: - Property
 class MyPageMainView: BaseView {
     weak var delegate: MyPageMainViewDelegate? = nil
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var roundView: UIImageView!
 }
 // MARK: - Life cycle
 extension MyPageMainView {
     override func awakeFromNib() {
         super.awakeFromNib()
+        setLayout()
     }
 }
 // MARK: - Protocol
 extension MyPageMainView {
+    func setLayout(){
+        button.layer.borderWidth = 0.5
+        button.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        button.layer.cornerRadius = 5
+        roundView.layer.cornerRadius = 35
+    }
 }

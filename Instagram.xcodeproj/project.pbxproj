@@ -106,28 +106,52 @@
 		FF9A0A1E244E99DE00CF3308 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				FF9A0A52244EC40700CF3308 /* MyPage */,
+				FF9A0A51244EC40100CF3308 /* Next */,
+				FF9A0A50244EC3F000CF3308 /* Top */,
 				FF9A0A1F244E99DE00CF3308 /* AppDelegate.swift */,
 				FF9A0A21244E99DE00CF3308 /* SceneDelegate.swift */,
 				FF9A0A25244E99DE00CF3308 /* Main.storyboard */,
 				FF9A0A28244E99E000CF3308 /* Assets.xcassets */,
 				FF9A0A2A244E99E000CF3308 /* LaunchScreen.storyboard */,
 				FF9A0A2D244E99E000CF3308 /* Info.plist */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		FF9A0A50244EC3F000CF3308 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				FF9A0A43244EA3C300CF3308 /* TopMainTableViewCell.swift */,
+				FF9A0A44244EA3C300CF3308 /* TopMainTableViewCell.xib */,
 				FF9A0A33244E9ED100CF3308 /* TopViewController.swift */,
 				FF9A0A34244E9ED100CF3308 /* TopViewController.xib */,
 				FF9A0A37244E9EFE00CF3308 /* TopMainView.swift */,
 				FF9A0A38244E9EFE00CF3308 /* TopMainView.xib */,
-				FF9A0A3B244E9FDC00CF3308 /* MyPageViewController.swift */,
-				FF9A0A3C244E9FDC00CF3308 /* MyPageViewController.xib */,
-				FF9A0A3F244EA00000CF3308 /* MyPageMainView.swift */,
-				FF9A0A40244EA00000CF3308 /* MyPageMainView.xib */,
-				FF9A0A43244EA3C300CF3308 /* TopMainTableViewCell.swift */,
-				FF9A0A44244EA3C300CF3308 /* TopMainTableViewCell.xib */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		FF9A0A51244EC40100CF3308 /* Next */ = {
+			isa = PBXGroup;
+			children = (
 				FF9A0A47244EB17D00CF3308 /* NextViewController.swift */,
 				FF9A0A48244EB17D00CF3308 /* NextViewController.xib */,
 				FF9A0A4B244EB19C00CF3308 /* NextMainView.swift */,
 				FF9A0A4C244EB19C00CF3308 /* NextMainView.xib */,
 			);
-			path = Instagram;
+			path = Next;
+			sourceTree = "<group>";
+		};
+		FF9A0A52244EC40700CF3308 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF9A0A3B244E9FDC00CF3308 /* MyPageViewController.swift */,
+				FF9A0A3C244E9FDC00CF3308 /* MyPageViewController.xib */,
+				FF9A0A3F244EA00000CF3308 /* MyPageMainView.swift */,
+				FF9A0A40244EA00000CF3308 /* MyPageMainView.xib */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
