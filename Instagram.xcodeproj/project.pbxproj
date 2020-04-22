@@ -31,6 +31,8 @@
 		FF9F8EA62450257300EF8ED8 /* NewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9F8EA42450257300EF8ED8 /* NewPostViewController.xib */; };
 		FF9F8EA9245025A500EF8ED8 /* NewPostMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F8EA7245025A400EF8ED8 /* NewPostMainView.swift */; };
 		FF9F8EAA245025A500EF8ED8 /* NewPostMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9F8EA8245025A400EF8ED8 /* NewPostMainView.xib */; };
+		FFBFA0E424502DAD00C9772F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFBFA0E324502DAD00C9772F /* GoogleService-Info.plist */; };
+		FFBFA0E724502FC000C9772F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFA0E624502FC000C9772F /* PostModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		FF9F8EA42450257300EF8ED8 /* NewPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostViewController.xib; sourceTree = "<group>"; };
 		FF9F8EA7245025A400EF8ED8 /* NewPostMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMainView.swift; sourceTree = "<group>"; };
 		FF9F8EA8245025A400EF8ED8 /* NewPostMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostMainView.xib; sourceTree = "<group>"; };
+		FFBFA0E324502DAD00C9772F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFBFA0E624502FC000C9772F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		FF9A0A1E244E99DE00CF3308 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				FFBFA0E524502FA900C9772F /* Model */,
 				FF9F8EA22450255600EF8ED8 /* NewPost */,
 				FF9A0A52244EC40700CF3308 /* MyPage */,
 				FF9A0A51244EC40100CF3308 /* Next */,
@@ -124,6 +129,7 @@
 				FF9A0A28244E99E000CF3308 /* Assets.xcassets */,
 				FF9A0A2A244E99E000CF3308 /* LaunchScreen.storyboard */,
 				FF9A0A2D244E99E000CF3308 /* Info.plist */,
+				FFBFA0E324502DAD00C9772F /* GoogleService-Info.plist */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -172,6 +178,14 @@
 				FF9F8EA8245025A400EF8ED8 /* NewPostMainView.xib */,
 			);
 			path = NewPost;
+			sourceTree = "<group>";
+		};
+		FFBFA0E524502FA900C9772F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFBFA0E624502FC000C9772F /* PostModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBFA0E424502DAD00C9772F /* GoogleService-Info.plist in Resources */,
 				FF9A0A3A244E9EFE00CF3308 /* TopMainView.xib in Resources */,
 				FF9F8EA62450257300EF8ED8 /* NewPostViewController.xib in Resources */,
 				FF9A0A36244E9ED100CF3308 /* TopViewController.xib in Resources */,
@@ -299,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF9A0A45244EA3C300CF3308 /* TopMainTableViewCell.swift in Sources */,
+				FFBFA0E724502FC000C9772F /* PostModel.swift in Sources */,
 				FF9A0A49244EB17D00CF3308 /* NextViewController.swift in Sources */,
 				FF9A0A41244EA00000CF3308 /* MyPageMainView.swift in Sources */,
 				FF9A0A3D244E9FDC00CF3308 /* MyPageViewController.swift in Sources */,

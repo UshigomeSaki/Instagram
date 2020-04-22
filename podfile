@@ -8,4 +8,7 @@ target 'Instagram' do
   # Pods for Instagram
 pod 'PGFramework', '~> 1.2.4'
 pod 'Alamofire', '~> 4.9.1'
+pod 'Firebase/Analytics'
+pod 'Firebase'
+pod 'Firebase/Database'
 end
