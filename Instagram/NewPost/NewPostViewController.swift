@@ -35,10 +35,14 @@ extension NewPostViewController:HeaderViewDelegate{
         animatorManager.navigationType = .slide_pop
     }
     func touchedRightButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-        animatorManager.navigationType = .slide_pop
+        let postModel : PostModel = PostModel()
+        postModel.post_user_name = ""
+        postModel.psot_sentence = ""
+        PostModel.create(request: postModel){
+        }
     }
 }
+
 // MARK: - Protocol
 extension NewPostViewController {
 }
@@ -51,6 +55,7 @@ extension NewPostViewController {
     }
     func setDelegate(){
         headerView.delegate = self
+        mainView.delegate = self
     }
 }
 
