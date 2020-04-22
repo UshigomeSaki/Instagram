@@ -35,11 +35,16 @@ extension TopViewController :TopMainViewDelegate{
         navigationController?.pushViewController(nextViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
-    
-    
-    
-    
 }
+
+extension TopViewController:HeaderViewDelegate{
+    func touchedRightButton(_ sender: UIButton) {
+        let newPostViewController = NewPostViewController()
+        navigationController?.pushViewController(newPostViewController, animated: true)
+        animatorManager.navigationType = .slide_push
+    }
+}
+
 // MARK: - method
 extension TopViewController {
     func setLayout(){
@@ -49,6 +54,7 @@ extension TopViewController {
     }
     func setDelegate(){
         mainView.delegate = self
+        headerView.delegate = self
     }
 }
 

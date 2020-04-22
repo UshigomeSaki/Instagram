@@ -27,6 +27,10 @@
 		FF9A0A4A244EB17D00CF3308 /* NextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9A0A48244EB17D00CF3308 /* NextViewController.xib */; };
 		FF9A0A4D244EB19C00CF3308 /* NextMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A0A4B244EB19C00CF3308 /* NextMainView.swift */; };
 		FF9A0A4E244EB19C00CF3308 /* NextMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9A0A4C244EB19C00CF3308 /* NextMainView.xib */; };
+		FF9F8EA52450257300EF8ED8 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F8EA32450257300EF8ED8 /* NewPostViewController.swift */; };
+		FF9F8EA62450257300EF8ED8 /* NewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9F8EA42450257300EF8ED8 /* NewPostViewController.xib */; };
+		FF9F8EA9245025A500EF8ED8 /* NewPostMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F8EA7245025A400EF8ED8 /* NewPostMainView.swift */; };
+		FF9F8EAA245025A500EF8ED8 /* NewPostMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9F8EA8245025A400EF8ED8 /* NewPostMainView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		FF9A0A48244EB17D00CF3308 /* NextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextViewController.xib; sourceTree = "<group>"; };
 		FF9A0A4B244EB19C00CF3308 /* NextMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMainView.swift; sourceTree = "<group>"; };
 		FF9A0A4C244EB19C00CF3308 /* NextMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextMainView.xib; sourceTree = "<group>"; };
+		FF9F8EA32450257300EF8ED8 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		FF9F8EA42450257300EF8ED8 /* NewPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostViewController.xib; sourceTree = "<group>"; };
+		FF9F8EA7245025A400EF8ED8 /* NewPostMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostMainView.swift; sourceTree = "<group>"; };
+		FF9F8EA8245025A400EF8ED8 /* NewPostMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostMainView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 		FF9A0A1E244E99DE00CF3308 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				FF9F8EA22450255600EF8ED8 /* NewPost */,
 				FF9A0A52244EC40700CF3308 /* MyPage */,
 				FF9A0A51244EC40100CF3308 /* Next */,
 				FF9A0A50244EC3F000CF3308 /* Top */,
@@ -152,6 +161,17 @@
 				FF9A0A40244EA00000CF3308 /* MyPageMainView.xib */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		FF9F8EA22450255600EF8ED8 /* NewPost */ = {
+			isa = PBXGroup;
+			children = (
+				FF9F8EA32450257300EF8ED8 /* NewPostViewController.swift */,
+				FF9F8EA42450257300EF8ED8 /* NewPostViewController.xib */,
+				FF9F8EA7245025A400EF8ED8 /* NewPostMainView.swift */,
+				FF9F8EA8245025A400EF8ED8 /* NewPostMainView.xib */,
+			);
+			path = NewPost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,12 +235,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF9A0A3A244E9EFE00CF3308 /* TopMainView.xib in Resources */,
+				FF9F8EA62450257300EF8ED8 /* NewPostViewController.xib in Resources */,
 				FF9A0A36244E9ED100CF3308 /* TopViewController.xib in Resources */,
 				FF9A0A2C244E99E000CF3308 /* LaunchScreen.storyboard in Resources */,
 				FF9A0A29244E99E000CF3308 /* Assets.xcassets in Resources */,
 				FF9A0A46244EA3C300CF3308 /* TopMainTableViewCell.xib in Resources */,
 				FF9A0A42244EA00000CF3308 /* MyPageMainView.xib in Resources */,
 				FF9A0A4A244EB17D00CF3308 /* NextViewController.xib in Resources */,
+				FF9F8EAA245025A500EF8ED8 /* NewPostMainView.xib in Resources */,
 				FF9A0A27244E99DE00CF3308 /* Main.storyboard in Resources */,
 				FF9A0A4E244EB19C00CF3308 /* NextMainView.xib in Resources */,
 				FF9A0A3E244E9FDC00CF3308 /* MyPageViewController.xib in Resources */,
@@ -281,10 +303,12 @@
 				FF9A0A41244EA00000CF3308 /* MyPageMainView.swift in Sources */,
 				FF9A0A3D244E9FDC00CF3308 /* MyPageViewController.swift in Sources */,
 				FF9A0A4D244EB19C00CF3308 /* NextMainView.swift in Sources */,
+				FF9F8EA9245025A500EF8ED8 /* NewPostMainView.swift in Sources */,
 				FF9A0A35244E9ED100CF3308 /* TopViewController.swift in Sources */,
 				FF9A0A20244E99DE00CF3308 /* AppDelegate.swift in Sources */,
 				FF9A0A22244E99DE00CF3308 /* SceneDelegate.swift in Sources */,
 				FF9A0A39244E9EFE00CF3308 /* TopMainView.swift in Sources */,
+				FF9F8EA52450257300EF8ED8 /* NewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
