@@ -13,6 +13,8 @@ import PGFramework
 class TopViewController: BaseViewController {
     @IBOutlet weak var mainView: TopMainView!
     @IBOutlet weak var headerView: HeaderView!
+    
+    var postModels : [PostModel] = [PostModel]()
 }
 // MARK: - Life cycle
 extension TopViewController {
@@ -31,8 +33,9 @@ extension TopViewController {
 }
 // MARK: - Protocol
 extension TopViewController :TopMainViewDelegate{
-    func didSelectRowAt() {
+    func didSelectRowAt(indexPath : IndexPath) {
         let nextViewController = NextViewController()
+        nextViewController.postmodel = postModels [indexPath.row]
         navigationController?.pushViewController(nextViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
@@ -59,6 +62,7 @@ extension TopViewController {
     }
     func getModel(){
         PostModel.reads { (postModels) in
+            self.postModels = postModels
             self.mainView.getModel(postModels:postModels)
         }
     }
