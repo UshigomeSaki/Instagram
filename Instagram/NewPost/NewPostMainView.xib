@@ -23,14 +23,11 @@
                         <constraint firstAttribute="width" secondItem="ftA-iw-AnQ" secondAttribute="height" multiplier="4:3" id="qZS-cC-IEy"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="キャプションを書く" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kdf-ZS-PPL">
-                    <rect key="frame" x="20" y="444.5" width="129" height="18.5"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="キャプションを書く" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kdf-ZS-PPL">
+                    <rect key="frame" x="20" y="444.5" width="374" height="19"/>
                     <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <action selector="textField:" destination="-1" eventType="editingDidEnd" id="z31-kl-Ium"/>
-                    </connections>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -39,6 +36,7 @@
                 <constraint firstItem="kdf-ZS-PPL" firstAttribute="top" secondItem="ftA-iw-AnQ" secondAttribute="bottom" constant="40" id="AFe-nT-RPk"/>
                 <constraint firstItem="ftA-iw-AnQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="B8L-DB-NlC"/>
                 <constraint firstItem="ftA-iw-AnQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="K2Y-3R-Php"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kdf-ZS-PPL" secondAttribute="trailing" constant="20" id="MpG-iD-r1C"/>
                 <constraint firstItem="kdf-ZS-PPL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bIT-Bf-OyG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

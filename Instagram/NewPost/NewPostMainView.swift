@@ -26,3 +26,7 @@ extension NewPostMainView {
 // MARK: - Protocol
 extension NewPostMainView {
 }
+
+// MARK: -Method
+extension NewPostMainView {
+}

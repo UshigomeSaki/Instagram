@@ -70,6 +70,7 @@
                 <constraint firstItem="yNS-Vd-tyG" firstAttribute="width" secondItem="BkI-5p-OuY" secondAttribute="width" id="r3c-Xy-QPU"/>
             </constraints>
             <connections>
+                <outlet property="discriptionLabel" destination="pf9-Gn-ISu" id="C5f-JB-POZ"/>
                 <outlet property="roundView" destination="RN0-bc-o2Q" id="S0B-XV-Stu"/>
             </connections>
             <point key="canvasLocation" x="168.84057971014494" y="94.754464285714278"/>
