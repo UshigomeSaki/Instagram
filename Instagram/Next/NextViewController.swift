@@ -13,6 +13,8 @@ import PGFramework
 class NextViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: NextMainView!
+    
+    var postmodel : PostModel = PostModel()
 }
 // MARK: - Life cycle
 extension NextViewController {
@@ -26,6 +28,7 @@ extension NextViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setLabel()
     }
 }
 
@@ -47,5 +50,8 @@ extension NextViewController {
     func setDelegate(){
         headerView.delegate = self
         
+    }
+    func setLabel(){
+        mainView.discriptionLabel.text = postmodel.discription
     }
 }

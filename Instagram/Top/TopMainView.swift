@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 protocol TopMainViewDelegate: NSObjectProtocol{
-    func didSelectRowAt()
+    func didSelectRowAt(indexPath: IndexPath)
 }
 extension TopMainViewDelegate {
 }
@@ -47,7 +47,7 @@ extension TopMainView:UITableViewDataSource {
 
 extension TopMainView:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let delegate = delegate{delegate.didSelectRowAt()}
+        if let delegate = delegate{delegate.didSelectRowAt(indexPath: indexPath)}
     }
     
 }

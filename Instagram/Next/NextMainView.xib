@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NextMainView" customModule="Instagram" customModuleProvider="target">
             <connections>
+                <outlet property="discriptionLabel" destination="X44-CS-Hrr" id="FVm-tc-l5C"/>
                 <outlet property="roundView" destination="fP2-bD-Hra" id="zQ6-Sr-wLD"/>
             </connections>
         </placeholder>
