@@ -17,6 +17,7 @@ extension TopMainTableViewCellDelegate {
 class TopMainTableViewCell: BaseTableViewCell {
     weak var delegate: TopMainTableViewCellDelegate? = nil
     @IBOutlet weak var roundView: UIImageView!
+    @IBOutlet weak var discriptionLabel: UILabel!
 }
 // MARK: - Life cycle
 extension TopMainTableViewCell {
@@ -29,5 +30,8 @@ extension TopMainTableViewCell {
 extension TopMainTableViewCell {
     func setLayout(){
         roundView.layer.cornerRadius = 20
-}
+    }
+    func updateCell(postModel:PostModel){
+        discriptionLabel.text = postModel.discription
+    }
 }

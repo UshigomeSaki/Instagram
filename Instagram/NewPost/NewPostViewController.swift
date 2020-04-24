@@ -36,9 +36,13 @@ extension NewPostViewController:HeaderViewDelegate{
     }
     func touchedRightButton(_ sender: UIButton) {
         let postModel : PostModel = PostModel()
+        if let text = mainView.textField.text{
+            postModel.discription = text
+        }
         postModel.post_user_name = ""
-        postModel.psot_sentence = ""
         PostModel.create(request: postModel){
+            self.navigationController?.popViewController(animated: true)
+            self.animatorManager.navigationType = .slide_pop
         }
     }
 }

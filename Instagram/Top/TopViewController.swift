@@ -26,6 +26,7 @@ extension TopViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getModel()
     }
 }
 // MARK: - Protocol
@@ -55,6 +56,11 @@ extension TopViewController {
     func setDelegate(){
         mainView.delegate = self
         headerView.delegate = self
+    }
+    func getModel(){
+        PostModel.reads { (postModels) in
+            self.mainView.getModel(postModels:postModels)
+        }
     }
 }
 
