@@ -14,7 +14,7 @@ class NextViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: NextMainView!
     
-    var postmodel : PostModel = PostModel()
+    var postModel : PostModel = PostModel()
 }
 // MARK: - Life cycle
 extension NextViewController {
@@ -28,6 +28,7 @@ extension NextViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getModel()
         setLabel()
     }
 }
@@ -39,7 +40,7 @@ extension NextViewController:HeaderViewDelegate{
     }
     func touchedRightButton(_ sender: UIButton) {
         let editViewController = EditViewController()
-        editViewController.postModel = postmodel
+        editViewController.postModel = postModel
         editViewController.modalPresentationStyle = .fullScreen
         present(editViewController, animated: true, completion: nil)
     }
@@ -64,6 +65,14 @@ extension NextViewController {
         
     }
     func setLabel(){
-        mainView.discriptionLabel.text = postmodel.discription
+        mainView.discriptionLabel.text = postModel.discription
+    }
+    func getModel(){
+        PostModel.readAt(id: postModel.id, success: {(postModel)in
+            self.postModel = postModel
+        }) {
+            self.navigationController?.popViewController(animated: true)
+            self.animatorManager.navigationType = .slide_pop
+        }
     }
 }

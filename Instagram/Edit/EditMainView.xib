@@ -47,6 +47,16 @@
                         <constraint firstAttribute="height" constant="1" id="jIU-uV-0IS"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wj1-nz-753">
+                    <rect key="frame" x="285.5" y="549" width="87" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="投稿を削除">
+                        <color key="titleColor" red="0.74048776390000004" green="0.74497202009999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="touchedDeleteButton:" destination="-1" eventType="touchUpInside" id="DBX-69-aBa"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -57,12 +67,14 @@
                 <constraint firstItem="jvw-BS-wN1" firstAttribute="top" secondItem="7Mb-Ld-cGS" secondAttribute="bottom" id="8Mt-Q7-mMJ"/>
                 <constraint firstItem="7Mb-Ld-cGS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ci4-ef-oMc"/>
                 <constraint firstItem="7Mb-Ld-cGS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fjq-y0-eGY"/>
+                <constraint firstItem="wj1-nz-753" firstAttribute="top" secondItem="jvw-BS-wN1" secondAttribute="bottom" constant="50" id="NEc-xe-CrA"/>
                 <constraint firstItem="BGk-og-qER" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="280" id="NFL-QJ-V1n"/>
                 <constraint firstItem="7Mb-Ld-cGS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="PzU-UZ-7cr"/>
                 <constraint firstItem="k23-Hj-hYF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SkZ-QK-qb0"/>
                 <constraint firstItem="k23-Hj-hYF" firstAttribute="top" secondItem="BGk-og-qER" secondAttribute="bottom" id="WBy-N3-piF"/>
                 <constraint firstItem="7Mb-Ld-cGS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bBV-GH-hv6"/>
                 <constraint firstItem="BGk-og-qER" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ecq-bY-jyo"/>
+                <constraint firstItem="wj1-nz-753" firstAttribute="trailing" secondItem="7Mb-Ld-cGS" secondAttribute="trailing" id="qEC-6V-kIl"/>
                 <constraint firstItem="k23-Hj-hYF" firstAttribute="width" secondItem="7Mb-Ld-cGS" secondAttribute="width" id="rtm-gT-qQB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
