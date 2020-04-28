@@ -9,6 +9,7 @@
 import UIKit
 
 import PGFramework
+
 // MARK: - Property
 class EditViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
@@ -46,6 +47,14 @@ extension EditViewController :HeaderViewDelegate{
     }
 }
 }
+extension EditViewController:EditMainViewDelegate{
+    func touchedDeleteButton() {
+        PostModel.delete(id:postModel.id) {
+            self.dismiss(animated: true, completion: nil)
+        }
+        }
+    }
+    
 // MARK: - method
 extension EditViewController {
     func setLayout(){
@@ -54,10 +63,12 @@ extension EditViewController {
     }
     func setDelegate(){
         headerView.delegate = self
+        mainView.delegate = self
     }
     func giveModel(){
         mainView.updateView(postModel:postModel)
     }
+
 }
 
 

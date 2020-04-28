@@ -35,7 +35,7 @@ extension TopViewController {
 extension TopViewController :TopMainViewDelegate{
     func didSelectRowAt(indexPath : IndexPath) {
         let nextViewController = NextViewController()
-        nextViewController.postmodel = postModels [indexPath.row]
+        nextViewController.postModel = postModels [indexPath.row]
         navigationController?.pushViewController(nextViewController, animated: true)
         animatorManager.navigationType = .slide_push
     }
