@@ -31,7 +31,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V9-n6-91k">
-                    <rect key="frame" x="10" y="172.5" width="394" height="33"/>
+                    <rect key="frame" x="10" y="182.5" width="394" height="33"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="プロフィール編集">
                         <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,7 +50,7 @@
                 <constraint firstItem="Kkv-0E-acs" firstAttribute="leading" secondItem="eOI-co-pW6" secondAttribute="trailing" constant="15" id="2wK-oT-Z41"/>
                 <constraint firstItem="eOI-co-pW6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="I64-91-bHv"/>
                 <constraint firstItem="0V9-n6-91k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="IIf-nK-ehe"/>
-                <constraint firstItem="0V9-n6-91k" firstAttribute="top" secondItem="ezB-3D-KdF" secondAttribute="bottom" constant="10" id="Pq5-0m-Jxi"/>
+                <constraint firstItem="0V9-n6-91k" firstAttribute="top" secondItem="ezB-3D-KdF" secondAttribute="bottom" constant="20" id="Pq5-0m-Jxi"/>
                 <constraint firstItem="eOI-co-pW6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="T9P-7K-1eg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0V9-n6-91k" secondAttribute="trailing" constant="10" id="TYH-x8-f9j"/>
                 <constraint firstItem="ezB-3D-KdF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Tgx-A1-CJ3"/>
