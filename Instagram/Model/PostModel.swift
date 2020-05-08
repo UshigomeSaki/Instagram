@@ -42,12 +42,12 @@ extension PostModel{
 
 //MARK: -Create
 extension PostModel{
-    static func create(request: PostModel,success:@escaping () -> Void) {
+    static func create(request:PostModel,success:@escaping () -> Void) {
         let dbRef = Database.database().reference().child(PATH).childByAutoId()
         if let key = dbRef.key{
             request.id = key
         }
-        let parameter = setParameter(request: request)
+        let parameter = setParameter(request:request)
         dbRef.setValue(parameter)
         success()
     }
@@ -58,12 +58,12 @@ extension PostModel{
 extension PostModel{
     static func reads(success:@escaping ([PostModel]) -> Void) {
         let dbRef = Database.database().reference().child(PATH)
-        dbRef.observe(.value, with: { snapshot in
+        dbRef.observe(.value, with: {snapshot in
             var models: [PostModel] = [PostModel]()
-            for item in (snapshot.children) {
+            for item in (snapshot.children){
                 let snapshot = item as! DataSnapshot
                 let data = snapshot.value as! [String: Any]
-                let model: PostModel = parse(data: data)
+                let model: PostModel = parse(data:data)
                 model.id = snapshot.key
                 models.append(model)
             }

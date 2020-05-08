@@ -37,6 +37,11 @@
 		FF9F8EAA245025A500EF8ED8 /* NewPostMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9F8EA8245025A400EF8ED8 /* NewPostMainView.xib */; };
 		FFBFA0E424502DAD00C9772F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFBFA0E324502DAD00C9772F /* GoogleService-Info.plist */; };
 		FFBFA0E724502FC000C9772F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFA0E624502FC000C9772F /* PostModel.swift */; };
+		FFC485E42464F08A004CB45F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC485E22464F08A004CB45F /* SignUpViewController.swift */; };
+		FFC485E52464F08A004CB45F /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC485E32464F08A004CB45F /* SignUpViewController.xib */; };
+		FFC485EC2464F58C004CB45F /* SignUpMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC485EA2464F58C004CB45F /* SignUpMainView.swift */; };
+		FFC485ED2464F58C004CB45F /* SignUpMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC485EB2464F58C004CB45F /* SignUpMainView.xib */; };
+		FFC485EF2464F76C004CB45F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC485EE2464F76C004CB45F /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,11 @@
 		FF9F8EA8245025A400EF8ED8 /* NewPostMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPostMainView.xib; sourceTree = "<group>"; };
 		FFBFA0E324502DAD00C9772F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFBFA0E624502FC000C9772F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		FFC485E22464F08A004CB45F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FFC485E32464F08A004CB45F /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		FFC485EA2464F58C004CB45F /* SignUpMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMainView.swift; sourceTree = "<group>"; };
+		FFC485EB2464F58C004CB45F /* SignUpMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpMainView.xib; sourceTree = "<group>"; };
+		FFC485EE2464F76C004CB45F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +147,9 @@
 		FF9A0A1E244E99DE00CF3308 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				FF044135245673A100FA237B /* Edit */,
 				FFBFA0E524502FA900C9772F /* Model */,
+				FFC485E12464F068004CB45F /* Auth */,
+				FF044135245673A100FA237B /* Edit */,
 				FF9F8EA22450255600EF8ED8 /* NewPost */,
 				FF9A0A52244EC40700CF3308 /* MyPage */,
 				FF9A0A51244EC40100CF3308 /* Next */,
@@ -204,8 +215,20 @@
 			isa = PBXGroup;
 			children = (
 				FFBFA0E624502FC000C9772F /* PostModel.swift */,
+				FFC485EE2464F76C004CB45F /* UserModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FFC485E12464F068004CB45F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FFC485E22464F08A004CB45F /* SignUpViewController.swift */,
+				FFC485E32464F08A004CB45F /* SignUpViewController.xib */,
+				FFC485EA2464F58C004CB45F /* SignUpMainView.swift */,
+				FFC485EB2464F58C004CB45F /* SignUpMainView.xib */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +297,7 @@
 				FF9A0A36244E9ED100CF3308 /* TopViewController.xib in Resources */,
 				FF9A0A2C244E99E000CF3308 /* LaunchScreen.storyboard in Resources */,
 				FF9A0A29244E99E000CF3308 /* Assets.xcassets in Resources */,
+				FFC485ED2464F58C004CB45F /* SignUpMainView.xib in Resources */,
 				FF044139245673BA00FA237B /* EditViewController.xib in Resources */,
 				FF9A0A46244EA3C300CF3308 /* TopMainTableViewCell.xib in Resources */,
 				FF04413E245673E600FA237B /* EditMainView.xib in Resources */,
@@ -282,6 +306,7 @@
 				FF9F8EAA245025A500EF8ED8 /* NewPostMainView.xib in Resources */,
 				FF9A0A27244E99DE00CF3308 /* Main.storyboard in Resources */,
 				FF9A0A4E244EB19C00CF3308 /* NextMainView.xib in Resources */,
+				FFC485E52464F08A004CB45F /* SignUpViewController.xib in Resources */,
 				FF9A0A3E244E9FDC00CF3308 /* MyPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,10 +365,13 @@
 				FFBFA0E724502FC000C9772F /* PostModel.swift in Sources */,
 				FF9A0A49244EB17D00CF3308 /* NextViewController.swift in Sources */,
 				FF9A0A41244EA00000CF3308 /* MyPageMainView.swift in Sources */,
+				FFC485EC2464F58C004CB45F /* SignUpMainView.swift in Sources */,
 				FF9A0A3D244E9FDC00CF3308 /* MyPageViewController.swift in Sources */,
 				FF9A0A4D244EB19C00CF3308 /* NextMainView.swift in Sources */,
+				FFC485EF2464F76C004CB45F /* UserModel.swift in Sources */,
 				FF04413D245673E600FA237B /* EditMainView.swift in Sources */,
 				FF9F8EA9245025A500EF8ED8 /* NewPostMainView.swift in Sources */,
+				FFC485E42464F08A004CB45F /* SignUpViewController.swift in Sources */,
 				FF9A0A35244E9ED100CF3308 /* TopViewController.swift in Sources */,
 				FF9A0A20244E99DE00CF3308 /* AppDelegate.swift in Sources */,
 				FF9A0A22244E99DE00CF3308 /* SceneDelegate.swift in Sources */,
