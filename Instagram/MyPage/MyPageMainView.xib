@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPageMainView" customModule="Instagram" customModuleProvider="target">
             <connections>
-                <outlet property="button" destination="0V9-n6-91k" id="Ww7-XI-PaU"/>
+                <outlet property="button" destination="0V9-n6-91k" id="cOT-ic-mKy"/>
                 <outlet property="roundView" destination="eOI-co-pW6" id="gGi-U3-jjs"/>
             </connections>
         </placeholder>
@@ -36,6 +36,9 @@
                     <state key="normal" title="プロフィール編集">
                         <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="editProfileButton:" destination="-1" eventType="touchUpInside" id="fSN-Ab-TXx"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-co-pW6">
                     <rect key="frame" x="20" y="64" width="70" height="70"/>

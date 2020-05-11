@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 import PGFramework
 // MARK: - Property
@@ -19,23 +20,37 @@ extension MyPageViewController {
     override func loadView() {
         super.loadView()
         setLayout()
+        setDelegate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if Auth.auth().currentUser == nil{
+            let signUpViewController = SignUpViewController()
+            navigationController?.pushViewController(signUpViewController, animated: false)
+        }
     }
 }
 // MARK: - Protocol
-extension MyPageViewController {
+extension MyPageViewController :MyPageMainViewDelegate{
+    func editProfileButton() {
+        let editProfileViewController = EditProfileViewController()
+        editProfileViewController.modalPresentationStyle = .fullScreen
+        present(editProfileViewController, animated: true, completion: nil)
+    }
+    
 }
 // MARK: - method
 extension MyPageViewController {
     func setLayout(){
         headerView.setCenter(text: "My Page", fontSize: 18, color: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         headerView.setLeft(text: "")
-        
+    }
+    func setDelegate(){
+        mainView.delegate = self
     }
 }
 
