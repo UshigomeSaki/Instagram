@@ -33,4 +33,7 @@ extension EditProfileMainView {
 }
 // MARK: - method
 extension EditProfileMainView {
+    func updateView(userModel:UserModel){
+        userNameTextField.text = userModel.nickname
+    }
 }

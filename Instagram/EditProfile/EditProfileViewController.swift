@@ -12,6 +12,8 @@ import PGFramework
 class EditProfileViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: EditProfileMainView!
+    
+    var userModel : UserModel=UserModel()
 }
 // MARK: - Life cycle
 extension EditProfileViewController {
@@ -25,6 +27,7 @@ extension EditProfileViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        giveModel()
     }
 }
 // MARK: - Protocol
@@ -33,10 +36,14 @@ extension EditProfileViewController :HeaderViewDelegate{
         dismiss(animated: true, completion: nil)
     }
     func touchedRightButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        if let text = mainView.userNameTextField.text{
+            userModel.nickname = text
+            UserModel.update(request: userModel) {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }
-
 extension EditProfileViewController :EditProfileMainViewDelegate{
     func logOutButton() {
         UserModel.logOut {
@@ -56,6 +63,9 @@ extension EditProfileViewController {
     func setDelegate(){
         headerView.delegate = self
         mainView.delegate = self
+    }
+    func giveModel(){
+        mainView.updateView(userModel:userModel)
     }
 
 }

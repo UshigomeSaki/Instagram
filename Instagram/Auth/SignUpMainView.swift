@@ -11,6 +11,7 @@ import UIKit
 import PGFramework
 protocol SignUpMainViewDelegate: NSObjectProtocol{
     func touchedSignUpButton()
+    func touchedSignInButton()
 }
 extension SignUpMainViewDelegate {
 }
@@ -22,6 +23,9 @@ class SignUpMainView: BaseView {
     @IBOutlet weak var passWordTextField: UITextField!
     @IBAction func touchedSignUpButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.touchedSignUpButton()}
+    }
+    @IBAction func touchedSignInButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.touchedSignInButton()}
     }
     
 }

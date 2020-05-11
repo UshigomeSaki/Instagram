@@ -16,6 +16,10 @@
 		FF86C6282468E33A00254774 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C6262468E33A00254774 /* EditProfileViewController.xib */; };
 		FF86C62B2468E36300254774 /* EditProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86C6292468E36300254774 /* EditProfileMainView.swift */; };
 		FF86C62C2468E36300254774 /* EditProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C62A2468E36300254774 /* EditProfileMainView.xib */; };
+		FF86C6312468EC0600254774 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86C62F2468EC0600254774 /* SignInViewController.swift */; };
+		FF86C6322468EC0600254774 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C6302468EC0600254774 /* SignInViewController.xib */; };
+		FF86C6352468EC2B00254774 /* SignInMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86C6332468EC2B00254774 /* SignInMainView.swift */; };
+		FF86C6362468EC2B00254774 /* SignInMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C6342468EC2B00254774 /* SignInMainView.xib */; };
 		FF9A0A20244E99DE00CF3308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A0A1F244E99DE00CF3308 /* AppDelegate.swift */; };
 		FF9A0A22244E99DE00CF3308 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A0A21244E99DE00CF3308 /* SceneDelegate.swift */; };
 		FF9A0A27244E99DE00CF3308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF9A0A25244E99DE00CF3308 /* Main.storyboard */; };
@@ -60,6 +64,10 @@
 		FF86C6262468E33A00254774 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		FF86C6292468E36300254774 /* EditProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileMainView.swift; sourceTree = "<group>"; };
 		FF86C62A2468E36300254774 /* EditProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileMainView.xib; sourceTree = "<group>"; };
+		FF86C62F2468EC0600254774 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FF86C6302468EC0600254774 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		FF86C6332468EC2B00254774 /* SignInMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInMainView.swift; sourceTree = "<group>"; };
+		FF86C6342468EC2B00254774 /* SignInMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInMainView.xib; sourceTree = "<group>"; };
 		FF9A0A1C244E99DE00CF3308 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9A0A1F244E99DE00CF3308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF9A0A21244E99DE00CF3308 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +151,20 @@
 				FF86C62A2468E36300254774 /* EditProfileMainView.xib */,
 			);
 			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		FF86C62E2468EBC900254774 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		FF86C6372468F2DE00254774 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		FF9A0A13244E99DE00CF3308 = {
@@ -243,10 +265,16 @@
 		FFC485E12464F068004CB45F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				FF86C62F2468EC0600254774 /* SignInViewController.swift */,
+				FF86C6302468EC0600254774 /* SignInViewController.xib */,
+				FF86C6332468EC2B00254774 /* SignInMainView.swift */,
+				FF86C6342468EC2B00254774 /* SignInMainView.xib */,
 				FFC485E22464F08A004CB45F /* SignUpViewController.swift */,
 				FFC485E32464F08A004CB45F /* SignUpViewController.xib */,
 				FFC485EA2464F58C004CB45F /* SignUpMainView.swift */,
 				FFC485EB2464F58C004CB45F /* SignUpMainView.xib */,
+				FF86C6372468F2DE00254774 /* SignUp */,
+				FF86C62E2468EBC900254774 /* SignIn */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -311,12 +339,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF86C6322468EC0600254774 /* SignInViewController.xib in Resources */,
 				FFBFA0E424502DAD00C9772F /* GoogleService-Info.plist in Resources */,
 				FF9A0A3A244E9EFE00CF3308 /* TopMainView.xib in Resources */,
 				FF9F8EA62450257300EF8ED8 /* NewPostViewController.xib in Resources */,
 				FF9A0A36244E9ED100CF3308 /* TopViewController.xib in Resources */,
 				FF9A0A2C244E99E000CF3308 /* LaunchScreen.storyboard in Resources */,
 				FF9A0A29244E99E000CF3308 /* Assets.xcassets in Resources */,
+				FF86C6362468EC2B00254774 /* SignInMainView.xib in Resources */,
 				FFC485ED2464F58C004CB45F /* SignUpMainView.xib in Resources */,
 				FF044139245673BA00FA237B /* EditViewController.xib in Resources */,
 				FF86C62C2468E36300254774 /* EditProfileMainView.xib in Resources */,
@@ -390,6 +420,8 @@
 				FFC485EC2464F58C004CB45F /* SignUpMainView.swift in Sources */,
 				FF9A0A3D244E9FDC00CF3308 /* MyPageViewController.swift in Sources */,
 				FF9A0A4D244EB19C00CF3308 /* NextMainView.swift in Sources */,
+				FF86C6312468EC0600254774 /* SignInViewController.swift in Sources */,
+				FF86C6352468EC2B00254774 /* SignInMainView.swift in Sources */,
 				FF86C6272468E33A00254774 /* EditProfileViewController.swift in Sources */,
 				FFC485EF2464F76C004CB45F /* UserModel.swift in Sources */,
 				FF04413D245673E600FA237B /* EditMainView.swift in Sources */,
