@@ -38,10 +38,10 @@ extension EditProfileViewController :HeaderViewDelegate{
     func touchedRightButton(_ sender: UIButton) {
         if let text = mainView.userNameTextField.text{
             userModel.nickname = text
+        }
             UserModel.update(request: userModel) {
                 self.dismiss(animated: true, completion: nil)
             }
-        }
     }
 }
 extension EditProfileViewController :EditProfileMainViewDelegate{
