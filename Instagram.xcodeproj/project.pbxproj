@@ -12,6 +12,10 @@
 		FF044139245673BA00FA237B /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF044137245673BA00FA237B /* EditViewController.xib */; };
 		FF04413D245673E600FA237B /* EditMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04413B245673E600FA237B /* EditMainView.swift */; };
 		FF04413E245673E600FA237B /* EditMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF04413C245673E600FA237B /* EditMainView.xib */; };
+		FF86C6272468E33A00254774 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86C6252468E33A00254774 /* EditProfileViewController.swift */; };
+		FF86C6282468E33A00254774 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C6262468E33A00254774 /* EditProfileViewController.xib */; };
+		FF86C62B2468E36300254774 /* EditProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86C6292468E36300254774 /* EditProfileMainView.swift */; };
+		FF86C62C2468E36300254774 /* EditProfileMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF86C62A2468E36300254774 /* EditProfileMainView.xib */; };
 		FF9A0A20244E99DE00CF3308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A0A1F244E99DE00CF3308 /* AppDelegate.swift */; };
 		FF9A0A22244E99DE00CF3308 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A0A21244E99DE00CF3308 /* SceneDelegate.swift */; };
 		FF9A0A27244E99DE00CF3308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF9A0A25244E99DE00CF3308 /* Main.storyboard */; };
@@ -52,6 +56,10 @@
 		FF044137245673BA00FA237B /* EditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditViewController.xib; sourceTree = "<group>"; };
 		FF04413B245673E600FA237B /* EditMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMainView.swift; sourceTree = "<group>"; };
 		FF04413C245673E600FA237B /* EditMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditMainView.xib; sourceTree = "<group>"; };
+		FF86C6252468E33A00254774 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		FF86C6262468E33A00254774 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		FF86C6292468E36300254774 /* EditProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileMainView.swift; sourceTree = "<group>"; };
+		FF86C62A2468E36300254774 /* EditProfileMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileMainView.xib; sourceTree = "<group>"; };
 		FF9A0A1C244E99DE00CF3308 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9A0A1F244E99DE00CF3308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF9A0A21244E99DE00CF3308 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +134,17 @@
 			path = Edit;
 			sourceTree = "<group>";
 		};
+		FF86C6242468E30500254774 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				FF86C6252468E33A00254774 /* EditProfileViewController.swift */,
+				FF86C6262468E33A00254774 /* EditProfileViewController.xib */,
+				FF86C6292468E36300254774 /* EditProfileMainView.swift */,
+				FF86C62A2468E36300254774 /* EditProfileMainView.xib */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
 		FF9A0A13244E99DE00CF3308 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +166,7 @@
 		FF9A0A1E244E99DE00CF3308 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				FF86C6242468E30500254774 /* EditProfile */,
 				FFBFA0E524502FA900C9772F /* Model */,
 				FFC485E12464F068004CB45F /* Auth */,
 				FF044135245673A100FA237B /* Edit */,
@@ -299,6 +319,8 @@
 				FF9A0A29244E99E000CF3308 /* Assets.xcassets in Resources */,
 				FFC485ED2464F58C004CB45F /* SignUpMainView.xib in Resources */,
 				FF044139245673BA00FA237B /* EditViewController.xib in Resources */,
+				FF86C62C2468E36300254774 /* EditProfileMainView.xib in Resources */,
+				FF86C6282468E33A00254774 /* EditProfileViewController.xib in Resources */,
 				FF9A0A46244EA3C300CF3308 /* TopMainTableViewCell.xib in Resources */,
 				FF04413E245673E600FA237B /* EditMainView.xib in Resources */,
 				FF9A0A42244EA00000CF3308 /* MyPageMainView.xib in Resources */,
@@ -368,6 +390,7 @@
 				FFC485EC2464F58C004CB45F /* SignUpMainView.swift in Sources */,
 				FF9A0A3D244E9FDC00CF3308 /* MyPageViewController.swift in Sources */,
 				FF9A0A4D244EB19C00CF3308 /* NextMainView.swift in Sources */,
+				FF86C6272468E33A00254774 /* EditProfileViewController.swift in Sources */,
 				FFC485EF2464F76C004CB45F /* UserModel.swift in Sources */,
 				FF04413D245673E600FA237B /* EditMainView.swift in Sources */,
 				FF9F8EA9245025A500EF8ED8 /* NewPostMainView.swift in Sources */,
@@ -377,6 +400,7 @@
 				FF9A0A22244E99DE00CF3308 /* SceneDelegate.swift in Sources */,
 				FF9A0A39244E9EFE00CF3308 /* TopMainView.swift in Sources */,
 				FF9F8EA52450257300EF8ED8 /* NewPostViewController.swift in Sources */,
+				FF86C62B2468E36300254774 /* EditProfileMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

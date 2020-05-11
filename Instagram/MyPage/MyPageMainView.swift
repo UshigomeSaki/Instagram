@@ -10,13 +10,18 @@ import UIKit
 
 import PGFramework
 protocol MyPageMainViewDelegate: NSObjectProtocol{
+    func editProfileButton()
 }
 extension MyPageMainViewDelegate {
 }
 // MARK: - Property
 class MyPageMainView: BaseView {
     weak var delegate: MyPageMainViewDelegate? = nil
+  
     @IBOutlet weak var button: UIButton!
+    @IBAction func editProfileButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.editProfileButton()}
+    }
     @IBOutlet weak var roundView: UIImageView!
 }
 // MARK: - Life cycle

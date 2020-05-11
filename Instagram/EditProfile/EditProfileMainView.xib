@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileMainView" customModule="Instagram" customModuleProvider="target">
+            <connections>
+                <outlet property="userNameTextField" destination="XnP-lH-MyS" id="LfP-Ez-H5T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pef-8D-41Y">
+                    <rect key="frame" x="157" y="194" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.87199596710000005" green="0.87682981640000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="EH0-OR-8dG"/>
+                        <constraint firstAttribute="width" secondItem="Pef-8D-41Y" secondAttribute="height" multiplier="1:1" id="tGv-w6-6uE"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XnP-lH-MyS">
+                    <rect key="frame" x="100" y="374" width="214" height="34"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s21-vQ-zPC">
+                    <rect key="frame" x="150" y="488" width="114" height="30"/>
+                    <color key="backgroundColor" red="0.74048776390000004" green="0.74497202009999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="ログアウト">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="logOutButton:" destination="-1" eventType="touchUpInside" id="uSm-nC-Owa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="XnP-lH-MyS" firstAttribute="top" secondItem="Pef-8D-41Y" secondAttribute="bottom" constant="80" id="6Og-XI-K9F"/>
+                <constraint firstItem="XnP-lH-MyS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="BTc-dX-vZ3"/>
+                <constraint firstItem="Pef-8D-41Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="Eda-7I-Ooc"/>
+                <constraint firstItem="s21-vQ-zPC" firstAttribute="top" secondItem="XnP-lH-MyS" secondAttribute="bottom" constant="80" id="PX6-yZ-kfO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XnP-lH-MyS" secondAttribute="trailing" constant="100" id="VEL-BB-L0o"/>
+                <constraint firstItem="s21-vQ-zPC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="150" id="Xwp-Dx-Edt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s21-vQ-zPC" secondAttribute="trailing" constant="150" id="YmO-wt-4Oi"/>
+                <constraint firstItem="Pef-8D-41Y" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ihe-b9-hyP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </view>
+    </objects>
+</document>
