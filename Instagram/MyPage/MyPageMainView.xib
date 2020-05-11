@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="button" destination="0V9-n6-91k" id="cOT-ic-mKy"/>
                 <outlet property="roundView" destination="eOI-co-pW6" id="gGi-U3-jjs"/>
+                <outlet property="userNameLabel" destination="Kkv-0E-acs" id="tpg-7F-zAb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

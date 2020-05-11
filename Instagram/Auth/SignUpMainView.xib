@@ -37,7 +37,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfB-tX-SZE">
                     <rect key="frame" x="100" y="526" width="214" height="30"/>
                     <color key="backgroundColor" red="0.74048776390000004" green="0.74497202009999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Sign Up">
+                    <state key="normal" title="新規登録">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -50,6 +50,15 @@
                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgy-dl-EOY">
+                    <rect key="frame" x="191" y="606" width="123" height="30"/>
+                    <state key="normal" title="ログインはこちら">
+                        <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="touchedSignInButton:" destination="-1" eventType="touchUpInside" id="9E9-G5-ts2"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -59,12 +68,14 @@
                 <constraint firstItem="NF0-cq-FJI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DUd-nr-bEt"/>
                 <constraint firstItem="1SO-FD-QAD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="250" id="Gl8-jQ-ZeK"/>
                 <constraint firstItem="PfB-tX-SZE" firstAttribute="top" secondItem="O1w-T0-2kX" secondAttribute="bottom" constant="50" id="HXV-Xe-02K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bgy-dl-EOY" secondAttribute="trailing" constant="100" id="Iw3-Kz-g0V"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O1w-T0-2kX" secondAttribute="trailing" constant="100" id="JvT-tL-Uuq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dJW-8H-bqQ" secondAttribute="trailing" constant="100" id="Lh5-Bm-hGJ"/>
                 <constraint firstItem="PfB-tX-SZE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="Sbk-3f-y86"/>
                 <constraint firstItem="1SO-FD-QAD" firstAttribute="top" secondItem="NF0-cq-FJI" secondAttribute="bottom" constant="50" id="UPd-at-GCU"/>
                 <constraint firstItem="O1w-T0-2kX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="bd1-2E-ekO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PfB-tX-SZE" secondAttribute="trailing" constant="100" id="gL6-cs-FbT"/>
+                <constraint firstItem="bgy-dl-EOY" firstAttribute="top" secondItem="PfB-tX-SZE" secondAttribute="bottom" constant="50" id="lo7-rj-l02"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1SO-FD-QAD" secondAttribute="trailing" constant="100" id="qub-yL-ugp"/>
                 <constraint firstItem="O1w-T0-2kX" firstAttribute="top" secondItem="dJW-8H-bqQ" secondAttribute="bottom" constant="40" id="zfA-s2-td9"/>
             </constraints>

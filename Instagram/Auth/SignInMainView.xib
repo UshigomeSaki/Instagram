@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInMainView" customModule="Instagram" customModuleProvider="target">
+            <connections>
+                <outlet property="mailAddressTextField" destination="jiI-Dx-jUf" id="WYy-2b-2Zq"/>
+                <outlet property="passWordTextField" destination="wIm-7o-i5p" id="ARW-kL-QqM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jiI-Dx-jUf">
+                    <rect key="frame" x="100" y="294" width="214" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pass Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIm-7o-i5p">
+                    <rect key="frame" x="100" y="368" width="214" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMw-pl-P7T">
+                    <rect key="frame" x="181" y="223" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-kK-2wx">
+                    <rect key="frame" x="100" y="452" width="214" height="30"/>
+                    <color key="backgroundColor" red="0.74048776390000004" green="0.74497202009999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="ログイン">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="touchedSignInButton:" destination="-1" eventType="touchUpInside" id="v1x-l1-pyc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbp-fv-VgG">
+                    <rect key="frame" x="191" y="532" width="123" height="30"/>
+                    <state key="normal" title="新規登録はこちら">
+                        <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="touchedSignUpButton:" destination="-1" eventType="touchUpInside" id="cse-EY-N5M"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jiI-Dx-jUf" secondAttribute="trailing" constant="100" id="1MN-hP-EDW"/>
+                <constraint firstItem="jiI-Dx-jUf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="2jw-ww-eSs"/>
+                <constraint firstItem="Bbp-fv-VgG" firstAttribute="top" secondItem="i4a-kK-2wx" secondAttribute="bottom" constant="50" id="AhQ-9d-sJG"/>
+                <constraint firstItem="wIm-7o-i5p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="FYe-Ke-INc"/>
+                <constraint firstItem="DMw-pl-P7T" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kr0-6j-5lr"/>
+                <constraint firstItem="i4a-kK-2wx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="Lsy-eV-kfN"/>
+                <constraint firstItem="jiI-Dx-jUf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="250" id="MQy-bh-mFB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wIm-7o-i5p" secondAttribute="trailing" constant="100" id="S56-21-hQh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i4a-kK-2wx" secondAttribute="trailing" constant="100" id="Xns-NH-q3b"/>
+                <constraint firstItem="i4a-kK-2wx" firstAttribute="top" secondItem="wIm-7o-i5p" secondAttribute="bottom" constant="50" id="aiK-KU-aII"/>
+                <constraint firstItem="jiI-Dx-jUf" firstAttribute="top" secondItem="DMw-pl-P7T" secondAttribute="bottom" constant="50" id="csc-kD-YOg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bbp-fv-VgG" secondAttribute="trailing" constant="100" id="oFz-yB-gBp"/>
+                <constraint firstItem="wIm-7o-i5p" firstAttribute="top" secondItem="jiI-Dx-jUf" secondAttribute="bottom" constant="40" id="vu6-pB-ZzG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="102"/>
+        </view>
+    </objects>
+</document>

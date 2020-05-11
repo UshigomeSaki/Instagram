@@ -14,6 +14,8 @@ import PGFramework
 class MyPageViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: MyPageMainView!
+    
+    var userModel : UserModel=UserModel()
 }
 // MARK: - Life cycle
 extension MyPageViewController {
@@ -32,12 +34,14 @@ extension MyPageViewController {
             let signUpViewController = SignUpViewController()
             navigationController?.pushViewController(signUpViewController, animated: false)
         }
+        getModel()
     }
 }
 // MARK: - Protocol
 extension MyPageViewController :MyPageMainViewDelegate{
     func editProfileButton() {
         let editProfileViewController = EditProfileViewController()
+        editProfileViewController.userModel = userModel
         editProfileViewController.modalPresentationStyle = .fullScreen
         present(editProfileViewController, animated: true, completion: nil)
     }
@@ -51,6 +55,12 @@ extension MyPageViewController {
     }
     func setDelegate(){
         mainView.delegate = self
+    }
+    func getModel(){
+        UserModel.readMe { (userModel) in
+            self.mainView.getModel(userModel:userModel)
+            self.userModel = userModel
+        }
     }
 }
 

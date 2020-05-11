@@ -23,6 +23,7 @@ class MyPageMainView: BaseView {
         if let delegate = delegate {delegate.editProfileButton()}
     }
     @IBOutlet weak var roundView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
 }
 // MARK: - Life cycle
 extension MyPageMainView {
@@ -38,5 +39,8 @@ extension MyPageMainView {
         button.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         button.layer.cornerRadius = 5
         roundView.layer.cornerRadius = 35
+    }
+    func getModel(userModel:UserModel){
+        userNameLabel.text = userModel.nickname
     }
 }
