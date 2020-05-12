@@ -66,7 +66,11 @@ extension NextViewController {
     }
     func setLabel(){
         mainView.discriptionLabel.text = postModel.discription
+        if let url = URL(string: postModel.image_paths[0]){
+            mainView.postImage.af_setImage(withURL: url)
     }
+    }
+        
     func getModel(){
         PostModel.readAt(id: postModel.id, success: {(postModel)in
             self.postModel = postModel
@@ -76,3 +80,4 @@ extension NextViewController {
         }
     }
 }
+

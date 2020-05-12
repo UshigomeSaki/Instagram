@@ -50,11 +50,10 @@
         <!--Home-->
         <scene sceneID="Xan-9j-bEu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uIM-uQ-9wW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="uIM-uQ-9wW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="Esq-jU-469"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pmh-Al-s2p">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

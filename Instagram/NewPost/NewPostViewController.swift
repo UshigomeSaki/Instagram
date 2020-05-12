@@ -10,7 +10,7 @@ import UIKit
 
 import PGFramework
 // MARK: - Property
-class NewPostViewController: BaseViewController, NewPostMainViewDelegate {
+class NewPostViewController: BaseViewController {
     @IBOutlet weak var headerView: HeaderView!
     @IBOutlet weak var mainView: NewPostMainView!
 }
@@ -27,7 +27,15 @@ extension NewPostViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage{
+            mainView.postImageView.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
 }
+
 
 extension NewPostViewController:HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
@@ -39,14 +47,25 @@ extension NewPostViewController:HeaderViewDelegate{
         if let text = mainView.textField.text{
             postModel.discription = text
         }
+        var images:[UIImage] = []
+        if let image = mainView.postImageView.image{
+            images.append(image)
+        }
         postModel.post_user_name = ""
-        PostModel.create(request: postModel){
+        PostModel.create(request: postModel, images: images){
             self.navigationController?.popViewController(animated: true)
             self.animatorManager.navigationType = .slide_pop
         }
     }
 }
 
+extension NewPostViewController:NewPostMainViewDelegate{
+    func touchedAddButton() {
+        useCamera()
+    }
+    
+    
+}
 // MARK: - Protocol
 extension NewPostViewController {
 }

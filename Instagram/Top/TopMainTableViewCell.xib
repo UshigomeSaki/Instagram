@@ -21,7 +21,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake" translatesAutoresizingMaskIntoConstraints="NO" id="yNS-Vd-tyG">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yNS-Vd-tyG">
                         <rect key="frame" x="0.0" y="80" width="919" height="689.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="yNS-Vd-tyG" secondAttribute="height" multiplier="4:3" id="eno-Rx-12M"/>
@@ -71,6 +71,7 @@
             </constraints>
             <connections>
                 <outlet property="discriptionLabel" destination="pf9-Gn-ISu" id="C5f-JB-POZ"/>
+                <outlet property="postImage" destination="yNS-Vd-tyG" id="M5f-z2-l8b"/>
                 <outlet property="roundView" destination="RN0-bc-o2Q" id="S0B-XV-Stu"/>
             </connections>
             <point key="canvasLocation" x="168.84057971014494" y="94.754464285714278"/>
@@ -78,6 +79,5 @@
     </objects>
     <resources>
         <image name="icon" width="2048" height="2048"/>
-        <image name="pancake" width="3264" height="2448"/>
     </resources>
 </document>

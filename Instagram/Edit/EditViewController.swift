@@ -32,7 +32,15 @@ extension EditViewController {
         super.viewWillAppear(animated)
         giveModel()
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    if let image = info[.originalImage] as? UIImage{
+        mainView.postImage.image = image
+        picker.dismiss(animated: true, completion: nil)
+        }
+    }
 }
+
 // MARK: - Protocol
 extension EditViewController :HeaderViewDelegate{
     func touchedLeftButton(_ sender: UIButton) {
@@ -42,12 +50,20 @@ extension EditViewController :HeaderViewDelegate{
         if let text = mainView.textView.text{
             postModel.discription = text
         }
-        PostModel.update(request: postModel) {
+        var images:[UIImage] = []
+        if let image = mainView.postImage.image{
+            images.append(image)
+        }
+        PostModel.update(request: postModel, images: images) {
             self.dismiss(animated: true, completion: nil)
     }
 }
 }
 extension EditViewController:EditMainViewDelegate{
+    func touchedImageEditButton() {
+        useCamera()
+    }
+    
     func touchedDeleteButton() {
         PostModel.delete(id:postModel.id) {
             self.dismiss(animated: true, completion: nil)
