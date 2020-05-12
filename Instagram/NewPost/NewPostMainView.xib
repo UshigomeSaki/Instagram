@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewPostMainView" customModule="Instagram" customModuleProvider="target">
             <connections>
+                <outlet property="postImageView" destination="ftA-iw-AnQ" id="gRL-2N-3AO"/>
                 <outlet property="textField" destination="kdf-ZS-PPL" id="7bp-1H-xn0"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake2" translatesAutoresizingMaskIntoConstraints="NO" id="ftA-iw-AnQ">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ftA-iw-AnQ">
                     <rect key="frame" x="0.0" y="94" width="414" height="310.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ftA-iw-AnQ" secondAttribute="height" multiplier="4:3" id="qZS-cC-IEy"/>
@@ -29,21 +30,33 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIj-Xq-Tdh">
+                    <rect key="frame" x="0.0" y="94" width="414" height="310.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                    <state key="normal" title="＋">
+                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="touchedAddButton:" destination="-1" eventType="touchUpInside" id="cIt-Tk-9fR"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="ftA-iw-AnQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="537-0o-UJN"/>
+                <constraint firstItem="aIj-Xq-Tdh" firstAttribute="bottom" secondItem="ftA-iw-AnQ" secondAttribute="bottom" id="7je-aL-x8S"/>
                 <constraint firstItem="kdf-ZS-PPL" firstAttribute="top" secondItem="ftA-iw-AnQ" secondAttribute="bottom" constant="40" id="AFe-nT-RPk"/>
                 <constraint firstItem="ftA-iw-AnQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="B8L-DB-NlC"/>
                 <constraint firstItem="ftA-iw-AnQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="K2Y-3R-Php"/>
+                <constraint firstItem="aIj-Xq-Tdh" firstAttribute="height" secondItem="ftA-iw-AnQ" secondAttribute="height" id="MGM-Nm-dNg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kdf-ZS-PPL" secondAttribute="trailing" constant="20" id="MpG-iD-r1C"/>
+                <constraint firstItem="aIj-Xq-Tdh" firstAttribute="top" secondItem="ftA-iw-AnQ" secondAttribute="top" id="Unc-N2-6L9"/>
                 <constraint firstItem="kdf-ZS-PPL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bIT-Bf-OyG"/>
+                <constraint firstItem="aIj-Xq-Tdh" firstAttribute="leading" secondItem="ftA-iw-AnQ" secondAttribute="leading" id="eRr-iz-teO"/>
+                <constraint firstItem="aIj-Xq-Tdh" firstAttribute="width" secondItem="ftA-iw-AnQ" secondAttribute="width" id="qal-Wb-m4v"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </view>
     </objects>
-    <resources>
-        <image name="pancake2" width="4032" height="3024"/>
-    </resources>
 </document>

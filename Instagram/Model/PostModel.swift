@@ -9,13 +9,14 @@
 import UIKit
 import PGFramework
 import FirebaseDatabase
+import FirebaseStorage
 
 class PostModel {
     fileprivate static let PATH: String = "post"
     var id  :String = String()
     var post_user_name: String = String()
     var discription: String = String()
-    var image_path: String = String()
+    var image_paths: [String] = [String]()
 }
 
 extension PostModel{
@@ -24,7 +25,7 @@ extension PostModel{
         if let id = data["id"]as? String{model.id = id}
         if let post_user_name = data["post_user_name"]as? String{model.post_user_name = post_user_name}
         if let discription = data["discription"]as? String{model.discription = discription}
-        if let image_path = data["image_path"]as? String{model.image_path = image_path}
+        if let image_paths = data["image_paths"]as? [String]{model.image_paths = image_paths}
         return model
     }
     
@@ -34,7 +35,7 @@ extension PostModel{
         parameter["id"] = request.id
         parameter["post_user_name"] = request.post_user_name
         parameter["discription"] = request.discription
-        parameter["image_path"] = request.image_path
+        parameter["image_paths"] = request.image_paths
         return parameter
     }
     
@@ -42,14 +43,19 @@ extension PostModel{
 
 //MARK: -Create
 extension PostModel{
-    static func create(request:PostModel,success:@escaping () -> Void) {
+    static func create(request:PostModel, images:[UIImage], success:@escaping () -> Void) {
         let dbRef = Database.database().reference().child(PATH).childByAutoId()
         if let key = dbRef.key{
             request.id = key
         }
-        let parameter = setParameter(request:request)
-        dbRef.setValue(parameter)
-        success()
+        var parameter = setParameter(request:request)
+        uploadPhoto(photoName: request.id, image: images, success: { (downloadPaths) in
+            parameter["image_paths"] = downloadPaths
+            dbRef.setValue(parameter)
+            success()
+        }) {
+            print("写真アップロードエラー：")
+        }
     }
 }
 
@@ -86,20 +92,26 @@ extension PostModel{
 
 //MARK: -Update
 extension PostModel{
-    static func update(request: PostModel,success:@escaping () -> Void) {
-    let id = request.id
-    let dbRef = Database.database().reference().child(PATH).child(id)
-    let parameter = setParameter(request: request)
-        dbRef.updateChildValues(parameter) { (error,dbRef) in
-            if error != nil{
-                print("updateエラー：", error)
-            }else {
-                success()
+    static func update(request:PostModel,images:[UIImage],success:@escaping() -> Void){
+            let id = request.id
+            let dbRef = Database.database().reference().child(PATH).child(id)
+        var parameter = setParameter(request: request)
+        uploadPhoto(photoName: request.id, image: images, success: { (downloadPaths) in
+            parameter["image_paths"] = downloadPaths
+            dbRef.updateChildValues(parameter){(error,dbRef)in
+                if error != nil{
+                    print("updateエラー：",error)
+                }else{
+                    success()
+                }
             }
+        })
+        {
+            print("updateエラー：")
         }
     }
-
 }
+
 
 //MARK: -Delete
 extension PostModel{
@@ -114,3 +126,40 @@ extension PostModel{
         }
     }
 }
+
+extension PostModel{
+    static func uploadPhoto(photoName: String, image: [UIImage]?, success: @escaping ([String]) -> Void, failure: @escaping () -> Void) -> Void{
+        let group = DispatchGroup()
+        let queue = DispatchQueue(label: ".photo")
+        guard let images = image else {return}
+        var num = 1
+        var paths: [String] = []
+        images.forEach { (image) in
+            group.enter()
+            queue.async {
+                guard let data = image.jpegData(compressionQuality: 0.05), data.count < 4000000 else {
+                    group.leave()
+                    return failure()
+                }
+                let fileRef = Storage.storage().reference().child("images/" + photoName + num.description)
+                num += 1
+                let metaData = StorageMetadata()
+                metaData.contentType = "image/jpeg"
+                fileRef.putData(data, metadata: metaData) { (meta, error) in
+                    fileRef.downloadURL { (url, error) in
+                        if let _ = error {
+                            return
+                        } else {
+                            paths.append(url?.description ?? "")
+                            group.leave()
+                        }
+                    }
+                }
+            }
+        }
+        group.notify(queue: .main) {
+            success(paths)
+        }
+    }
+}
+

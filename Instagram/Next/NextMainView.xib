@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NextMainView" customModule="Instagram" customModuleProvider="target">
             <connections>
                 <outlet property="discriptionLabel" destination="X44-CS-Hrr" id="FVm-tc-l5C"/>
+                <outlet property="postImage" destination="yqa-eU-MbU" id="pAF-fr-M4u"/>
                 <outlet property="roundView" destination="fP2-bD-Hra" id="zQ6-Sr-wLD"/>
             </connections>
         </placeholder>
@@ -24,7 +25,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake" translatesAutoresizingMaskIntoConstraints="NO" id="yqa-eU-MbU">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yqa-eU-MbU">
                     <rect key="frame" x="0.0" y="124" width="414" height="310.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="yqa-eU-MbU" secondAttribute="height" multiplier="4:3" id="JFi-c1-jyg"/>
@@ -78,6 +79,5 @@
     </objects>
     <resources>
         <image name="icon" width="2048" height="2048"/>
-        <image name="pancake" width="3264" height="2448"/>
     </resources>
 </document>

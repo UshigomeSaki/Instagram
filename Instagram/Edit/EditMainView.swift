@@ -11,6 +11,7 @@ import UIKit
 import PGFramework
 protocol EditMainViewDelegate: NSObjectProtocol{
     func touchedDeleteButton()
+    func touchedImageEditButton()
 }
 extension EditMainViewDelegate {
 }
@@ -22,7 +23,12 @@ class EditMainView: BaseView {
     @IBAction func touchedDeleteButton(_ sender: UIButton) {
         if let delegate = delegate {delegate.touchedDeleteButton()}
     }
+    @IBOutlet weak var postImage: UIImageView!
     var postModel : PostModel = PostModel()
+    
+    @IBAction func touchedImageEditButton(_ sender: UIButton) {
+        if let delegate = delegate {delegate.touchedImageEditButton()}
+    }
 }
 // MARK: - Life cycle
 extension EditMainView {
@@ -34,5 +40,8 @@ extension EditMainView {
 extension EditMainView {
     func updateView(postModel:PostModel){
         textView.text = postModel.discription
+        if let url = URL(string: postModel.image_paths[0]){
+        postImage.af_setImage(withURL: url)
+    }
     }
 }

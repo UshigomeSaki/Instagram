@@ -18,6 +18,7 @@ class TopMainTableViewCell: BaseTableViewCell {
     weak var delegate: TopMainTableViewCellDelegate? = nil
     @IBOutlet weak var roundView: UIImageView!
     @IBOutlet weak var discriptionLabel: UILabel!
+    @IBOutlet weak var postImage: UIImageView!
 }
 // MARK: - Life cycle
 extension TopMainTableViewCell {
@@ -33,5 +34,9 @@ extension TopMainTableViewCell {
     }
     func updateCell(postModel:PostModel){
         discriptionLabel.text = postModel.discription
+        
+        if let url = URL(string: postModel.image_paths[0]){
+            postImage.af_setImage(withURL: url)
+        }
     }
 }
